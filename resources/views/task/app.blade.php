@@ -22,19 +22,6 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-    <!-- Header -->
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top bg-primary shadow">
-            <div class="container">
-                <span class="navbar-brand text-white">
-                    <img src="{{ asset('images/brand-laravel.svg') }}" class="align-top me-2" width="30" alt="Logo">
-                    Aplikasi To Do List dengan Laravel 11
-                </span>
-            </div>
-        </nav>
-    </header>
-
     <!-- Main Content -->
     <main class="flex-shrink-0">
         <div class="container pt-5">
@@ -47,7 +34,7 @@
                         <!-- menampilkan pesan berhasil -->
                         @if (session('success'))
                             <div class="alert alert-success alert-dismissible rounded-4 fade show mb-4" role="alert">
-                                <h5 class="alert-heading"><i class="bi bi-check-circle-fill me-1"></i> Success!</h5>
+                                <h5 class="alert-heading"><i class="bi bi-check-circle-fill me-1"></i> Berhasil!</h5>
                                 <p class="mb-0">
                                     {{ session('success') }}
                                 </p>
@@ -57,7 +44,7 @@
                         <!-- menampilkan pesan kesalahan -->
                         @if ($errors->any())
                             <div class="alert alert-danger alert-dismissible rounded-4 fade show mb-4" role="alert">
-                                <h5 class="alert-heading"><i class="bi bi-x-circle-fill me-1"></i> Failed!</h5>
+                                <h5 class="alert-heading"><i class="bi bi-x-circle-fill me-1"></i> Gagal!</h5>
                                 <p class="mb-0">
                                     @foreach ($errors->all() as $error)
                                         {{ $error }}
@@ -166,16 +153,6 @@
             </div>
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer mt-auto bg-white shadow py-4">
-        <div class="container">
-            <!-- copyright -->
-            <div class="copyright text-center mb-2 mb-md-0">
-                &copy; 2024 - <a href="https://github.com/handikatriarlan" target="_blank" class="text-brand text-decoration-none">handikatriarlan</a>
-            </div>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
