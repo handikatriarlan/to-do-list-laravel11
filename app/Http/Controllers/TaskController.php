@@ -56,7 +56,7 @@ class TaskController extends Controller
     {
         // validasi form
         $request->validate([
-            'task' => 'required|min:5'
+            'task' => 'required'
         ]);
 
         // data yang akan diubah
